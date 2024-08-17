@@ -11,7 +11,40 @@ import Downrow from '../components/Downrow.astro'
     </div>
   </div>
 
-  <button class="section__button">
-    <Downrow />
-  </button>
+  <Downrow />
 </section>
+
+<style>
+  .section {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .section__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .section__link--title {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+
+  .section__h1--title {
+    font-family: var(--tipo-secundaria);
+    font-size: 3em;
+    font-weight: 500;
+  }
+  .section__h2--link-title,
+  .section__a--link-title {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  
+</style>

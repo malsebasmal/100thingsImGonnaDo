@@ -3,6 +3,10 @@ interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+
+import '@fontsource-variable/grandstander';
+import '@fontsource-variable/rubik';
+import "../style/reset.css"
 ---
 
 <!doctype html>
@@ -24,7 +28,12 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	html {
-		font-family: system-ui, sans-serif;
-		/* background: #13151a; */
+	}
+	body {
+		width: 100%;
+		height: auto;
+
+		display: flex;
+		justify-content: center;
 	}
 </style>
