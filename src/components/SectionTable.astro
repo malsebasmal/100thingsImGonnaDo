@@ -1,14 +1,15 @@
 ---
 import CheckBox from "../components/CheckBox.astro";
+const { id } = Astro.props
 ---
 
-<section class="section">
+<section class="section" id={id}>
   <table class="section__table">
     <tr class="tr__header">
       <th class="hr__header">NUMBER</th>
       <th class="hr__header">DO WHAT?</th>
       <th class="hr__header">DATE REALICE</th>
-      <th class="hr__header">CHECK?</th>
+      <th class="hr__header">CHECK</th>
     </tr>
     <tr class="tr__data">
       <td class="td__data">1</td>
@@ -20,3 +21,13 @@ import CheckBox from "../components/CheckBox.astro";
     </tr>
   </table>
 </section>
+
+<style>
+  .section {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+</style>

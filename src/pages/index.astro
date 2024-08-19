@@ -5,16 +5,44 @@ import SectionTable from '../components/SectionTable.astro';
 ---
 
 <Layout title="100 things i'm gonna do">
-	<main>
-		<SectionTitle />
-		<SectionTable />
-	</main>
+	<div class="div">
+		<main class="div__main">
+			<SectionTitle />
+			<SectionTable id="ThingsToDo" />
+		</main>
+	</div>
 </Layout>
 
 <style>
-	main {
+	.div {
+			position: relative;
+			padding: 0rem 1rem;
+			border-right: 5px solid transparent;
+			border-left: 5px solid transparent;
+	}
+
+	.div::before,
+	.div::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 5rem;
+			background: radial-gradient(circle, rgba(0, 0, 0, 0.175) 35%, transparent 55%) 0 0/100% 5rem;
+			background-repeat: repeat-y;
+	}
+
+	.div::before {
+			left: -60px;
+	}
+
+	.div::after {
+			right: -60px;
+	}
+	.div__main {
 		min-width: 60rem;
 		height: auto;
-		border: 2px solid #ffb4b8;
+		border-left: 2px solid #ffb4b8;
+		border-right: 2px solid #ffb4b8;
 	}
 </style>
